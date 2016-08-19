@@ -1,6 +1,11 @@
 var express = require('express')
 var multer = require('multer')
-var upload = multer({ dest: '../uploads/' })
+var path = require("path")
+
+//
+//console.log(`${__dirname}/../uploads/`);
+
+var upload = multer({ dest: path.join(__dirname,'..','uploads') })
 
 
 module.exports = function (app) {
